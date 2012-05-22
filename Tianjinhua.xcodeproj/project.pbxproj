@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13779BB5156C35000035475C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB4156C35000035475C /* UIKit.framework */; };
+		13779BB7156C35000035475C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB6156C35000035475C /* Foundation.framework */; };
+		13779BB9156C35000035475C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB8156C35000035475C /* CoreGraphics.framework */; };
+		13779BBF156C35000035475C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13779BBD156C35000035475C /* InfoPlist.strings */; };
+		13779BC1156C35000035475C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13779BC0156C35000035475C /* main.m */; };
+		13779BC5156C35000035475C /* TianjinhuaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13779BC4156C35000035475C /* TianjinhuaAppDelegate.m */; };
+		13779BC8156C35000035475C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13779BC6156C35000035475C /* MainStoryboard.storyboard */; };
+		13779BCB156C35000035475C /* TianjinhuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13779BCA156C35000035475C /* TianjinhuaViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13779BB0156C35000035475C /* Tianjinhua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tianjinhua.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13779BB4156C35000035475C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		13779BB6156C35000035475C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		13779BB8156C35000035475C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		13779BBC156C35000035475C /* Tianjinhua-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tianjinhua-Info.plist"; sourceTree = "<group>"; };
+		13779BBE156C35000035475C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13779BC0156C35000035475C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13779BC2156C35000035475C /* Tianjinhua-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tianjinhua-Prefix.pch"; sourceTree = "<group>"; };
+		13779BC3156C35000035475C /* TianjinhuaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TianjinhuaAppDelegate.h; sourceTree = "<group>"; };
+		13779BC4156C35000035475C /* TianjinhuaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TianjinhuaAppDelegate.m; sourceTree = "<group>"; };
+		13779BC7156C35000035475C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		13779BC9156C35000035475C /* TianjinhuaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TianjinhuaViewController.h; sourceTree = "<group>"; };
+		13779BCA156C35000035475C /* TianjinhuaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TianjinhuaViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13779BAD156C35000035475C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13779BB5156C35000035475C /* UIKit.framework in Frameworks */,
+				13779BB7156C35000035475C /* Foundation.framework in Frameworks */,
+				13779BB9156C35000035475C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13779BA5156C35000035475C = {
+			isa = PBXGroup;
+			children = (
+				13779BBA156C35000035475C /* Tianjinhua */,
+				13779BB3156C35000035475C /* Frameworks */,
+				13779BB1156C35000035475C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13779BB1156C35000035475C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13779BB0156C35000035475C /* Tianjinhua.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13779BB3156C35000035475C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13779BB4156C35000035475C /* UIKit.framework */,
+				13779BB6156C35000035475C /* Foundation.framework */,
+				13779BB8156C35000035475C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13779BBA156C35000035475C /* Tianjinhua */ = {
+			isa = PBXGroup;
+			children = (
+				13779BC3156C35000035475C /* TianjinhuaAppDelegate.h */,
+				13779BC4156C35000035475C /* TianjinhuaAppDelegate.m */,
+				13779BC6156C35000035475C /* MainStoryboard.storyboard */,
+				13779BC9156C35000035475C /* TianjinhuaViewController.h */,
+				13779BCA156C35000035475C /* TianjinhuaViewController.m */,
+				13779BBB156C35000035475C /* Supporting Files */,
+			);
+			path = Tianjinhua;
+			sourceTree = "<group>";
+		};
+		13779BBB156C35000035475C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13779BBC156C35000035475C /* Tianjinhua-Info.plist */,
+				13779BBD156C35000035475C /* InfoPlist.strings */,
+				13779BC0156C35000035475C /* main.m */,
+				13779BC2156C35000035475C /* Tianjinhua-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13779BAF156C35000035475C /* Tianjinhua */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13779BCE156C35000035475C /* Build configuration list for PBXNativeTarget "Tianjinhua" */;
+			buildPhases = (
+				13779BAC156C35000035475C /* Sources */,
+				13779BAD156C35000035475C /* Frameworks */,
+				13779BAE156C35000035475C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tianjinhua;
+			productName = Tianjinhua;
+			productReference = 13779BB0156C35000035475C /* Tianjinhua.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13779BA7156C35000035475C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Tianjinhua;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 13779BAA156C35000035475C /* Build configuration list for PBXProject "Tianjinhua" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 13779BA5156C35000035475C;
+			productRefGroup = 13779BB1156C35000035475C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13779BAF156C35000035475C /* Tianjinhua */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13779BAE156C35000035475C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13779BBF156C35000035475C /* InfoPlist.strings in Resources */,
+				13779BC8156C35000035475C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13779BAC156C35000035475C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13779BC1156C35000035475C /* main.m in Sources */,
+				13779BC5156C35000035475C /* TianjinhuaAppDelegate.m in Sources */,
+				13779BCB156C35000035475C /* TianjinhuaViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		13779BBD156C35000035475C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13779BBE156C35000035475C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		13779BC6156C35000035475C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13779BC7156C35000035475C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13779BCC156C35000035475C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		13779BCD156C35000035475C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13779BCF156C35000035475C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tianjinhua/Tianjinhua-Prefix.pch";
+				INFOPLIST_FILE = "Tianjinhua/Tianjinhua-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		13779BD0156C35000035475C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tianjinhua/Tianjinhua-Prefix.pch";
+				INFOPLIST_FILE = "Tianjinhua/Tianjinhua-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13779BAA156C35000035475C /* Build configuration list for PBXProject "Tianjinhua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13779BCC156C35000035475C /* Debug */,
+				13779BCD156C35000035475C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13779BCE156C35000035475C /* Build configuration list for PBXNativeTarget "Tianjinhua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13779BCF156C35000035475C /* Debug */,
+				13779BD0156C35000035475C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13779BA7156C35000035475C /* Project object */;
+}
