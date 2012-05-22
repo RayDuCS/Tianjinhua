@@ -28,6 +28,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
+    // TODO - add rotations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
