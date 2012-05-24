@@ -7,15 +7,22 @@
 //
 
 #import "TianjinhuaViewController.h"
+#import "TianjinhuaMenu.h"
 
 @interface TianjinhuaViewController ()
+
+@property (nonatomic, weak) IBOutlet TianjinhuaMenu *menuView;
 
 @end
 
 @implementation TianjinhuaViewController
 
+@synthesize menuView = _menuView;
+
 - (void)viewDidLoad
 {
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -31,5 +38,10 @@
     // TODO - add rotations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+
+
+
+
 
 @end

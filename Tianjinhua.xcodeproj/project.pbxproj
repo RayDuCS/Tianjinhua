@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1366396F156EBE0E006051D9 /* TianjinhuaMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1366396E156EBE0E006051D9 /* TianjinhuaMenu.m */; };
+		1366397E156ECD24006051D9 /* TianjinhuaListeningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1366397D156ECD23006051D9 /* TianjinhuaListeningController.m */; };
+		13663981156ECDB7006051D9 /* TianjinhuaListeningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13663980156ECDB7006051D9 /* TianjinhuaListeningView.m */; };
 		13779BB5156C35000035475C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB4156C35000035475C /* UIKit.framework */; };
 		13779BB7156C35000035475C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB6156C35000035475C /* Foundation.framework */; };
 		13779BB9156C35000035475C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB8156C35000035475C /* CoreGraphics.framework */; };
@@ -18,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1366396D156EBE0E006051D9 /* TianjinhuaMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianjinhuaMenu.h; sourceTree = "<group>"; };
+		1366396E156EBE0E006051D9 /* TianjinhuaMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianjinhuaMenu.m; sourceTree = "<group>"; };
+		1366397C156ECD23006051D9 /* TianjinhuaListeningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianjinhuaListeningController.h; sourceTree = SOURCE_ROOT; };
+		1366397D156ECD23006051D9 /* TianjinhuaListeningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianjinhuaListeningController.m; sourceTree = SOURCE_ROOT; };
+		1366397F156ECDB7006051D9 /* TianjinhuaListeningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianjinhuaListeningView.h; sourceTree = "<group>"; };
+		13663980156ECDB7006051D9 /* TianjinhuaListeningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianjinhuaListeningView.m; sourceTree = "<group>"; };
 		13779BB0156C35000035475C /* Tianjinhua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tianjinhua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13779BB4156C35000035475C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13779BB6156C35000035475C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +89,12 @@
 				13779BC3156C35000035475C /* TianjinhuaAppDelegate.h */,
 				13779BC4156C35000035475C /* TianjinhuaAppDelegate.m */,
 				13779BC6156C35000035475C /* MainStoryboard.storyboard */,
+				1366397F156ECDB7006051D9 /* TianjinhuaListeningView.h */,
+				13663980156ECDB7006051D9 /* TianjinhuaListeningView.m */,
+				1366396D156EBE0E006051D9 /* TianjinhuaMenu.h */,
+				1366397C156ECD23006051D9 /* TianjinhuaListeningController.h */,
+				1366397D156ECD23006051D9 /* TianjinhuaListeningController.m */,
+				1366396E156EBE0E006051D9 /* TianjinhuaMenu.m */,
 				13779BC9156C35000035475C /* TianjinhuaViewController.h */,
 				13779BCA156C35000035475C /* TianjinhuaViewController.m */,
 				13779BBB156C35000035475C /* Supporting Files */,
@@ -164,6 +179,9 @@
 				13779BC1156C35000035475C /* main.m in Sources */,
 				13779BC5156C35000035475C /* TianjinhuaAppDelegate.m in Sources */,
 				13779BCB156C35000035475C /* TianjinhuaViewController.m in Sources */,
+				1366396F156EBE0E006051D9 /* TianjinhuaMenu.m in Sources */,
+				1366397E156ECD24006051D9 /* TianjinhuaListeningController.m in Sources */,
+				13663981156ECDB7006051D9 /* TianjinhuaListeningView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,7 @@
 				13779BD0156C35000035475C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
