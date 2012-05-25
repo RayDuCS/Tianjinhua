@@ -8,6 +8,8 @@
 
 #import "TianjinhuaViewController.h"
 #import "TianjinhuaMenu.h"
+#import "TianjinhuaListeningController.h"
+#import "TianjinhuaWords.h"
 
 @interface TianjinhuaViewController ()
 
@@ -39,7 +41,12 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"listenSeg"])
+    {
+    }
+}
 
 
 
