@@ -110,8 +110,6 @@
                  withExplanation:[NSArray arrayWithObjects:@"游戏术语",@"挂衣服",@"扑街了", nil]];
     
     self.words = [NSArray arrayWithObjects:baozi,jiaozi,jianbing,daboluo,rapier, apple, paper, choc, juice, chops, stamp, mtg, towel, dead, bingjiling, nil];
-    
-    self.words = [NSArray arrayWithObjects:baozi,jiaozi,jianbing,daboluo,rapier, nil];
 }
 
 
