@@ -169,7 +169,7 @@
         //generate new test set.
         TianjinhuaWords *wordsRef = [[TianjinhuaWords alloc] init];
         [wordsRef load];
-        self.words = [wordsRef.words copy];
+        self.words = [wordsRef generateWordsWithCapacity:CAPACITY];
         NSMutableArray *choices = [[NSMutableArray alloc] initWithCapacity:CAPACITY];
         for(int i=0; i<CAPACITY; i++)
         {

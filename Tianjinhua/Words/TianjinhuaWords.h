@@ -11,5 +11,6 @@
 @interface TianjinhuaWords : NSObject
 @property (nonatomic) NSArray *words;
 - (void) load;
+- (NSArray *)generateWordsWithCapacity:(int)capacity;
 
 @end
