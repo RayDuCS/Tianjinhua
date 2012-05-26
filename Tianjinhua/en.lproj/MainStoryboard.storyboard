@@ -109,15 +109,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="Lvp-of-sgO" customClass="TianjinhuaListeningView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                            <view hidden="YES" contentMode="scaleToFill" id="yYN-LH-2Ly" customClass="TianjinhuaManualView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zE8-a9-xDG">
-                                        <rect key="frame" x="20" y="20" width="85" height="37"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="rgL-uy-zgS">
+                                        <rect key="frame" x="51" y="20" width="219" height="293"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">Hello World!  这个是一个测试，只是一个测试，真的只是一个测试，真的真的只是一个测试。。。。Target is expanding its partnership with Shopkick, a mobile couponing app that allows shoppers to collect and exchange points for rewards.
+Beginning Wednesday, shoppers equipped with Shopkick on their iPhone or Android devices will be eligible to collect points, or “kicks,” as soon as they step foot in one of Target’s 1,764 stores. They can earn more points by scanning various products in the store using the app, and then redeem those points for items such as Target gift cards, Facebook credits, dining gift certificates, iTunes downloads, charitable donations, etc.
+
+So how much do you have to do for a reward? Five hundred kicks will get you a $2 Target gift card; 6,250 will get you a $25 one. Walking into a store merits 60 kicks on a normal day, and between 120 and 300 kicks on special promotional days. Scan every designated item in the store and you’ll earn 315 kicks. If that seems like a lot of work, remember, it’s designed as a bonus for repeat shoppers — not scavenger hunters.
+
+Target’s program is an expansion of one implemented at 242 of its stores in November 2010 and is the largest partnership Shopkick has announced to date. In November, the startup partnered with Visa to allow shoppers to collect points by making purchases from — rather than just visiting — retailers including Toys “R” Us, American Eagle Outfitters, Old Navy and Wet Seal. Shopkick, which claims 3 million members, has also worked with CW Television Network, offering kicks in exchange for watching and recording ads displayed on the network.
+
+Shopkick has more than 3 million registered users and has recorded 7 million verified walk-ins to partner stores since launching in June 2009, the company tells us.
+
+More About: retail, shopkick, Target</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eoW-kg-57p">
+                                        <rect key="frame" x="107" y="346" width="107" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="回主菜单">
+                                        <state key="normal" title="OK">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -125,9 +142,60 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="menuTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="IsW-oL-FW7"/>
+                                            <action selector="okTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="Tmn-x3-nIu"/>
                                         </connections>
                                     </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="lrP-TV-BIG" customClass="TianjinhuaListeningResult">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="MZL-zu-wYx">
+                                        <rect key="frame" x="30" y="78" width="245" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3SS-dH-k8S">
+                                        <rect key="frame" x="44" y="314" width="75" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" 分享">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moveTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="dZk-n3-XpB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vat-Vh-1tx">
+                                        <rect key="frame" x="196" y="314" width="85" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="再来一次">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moveTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="ymV-wu-L6W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Lvp-of-sgO" customClass="TianjinhuaListeningView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="b9N-Mr-bwb">
                                         <rect key="frame" x="67" y="80" width="186" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,7 +256,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ps-b2-mOY">
-                                        <rect key="frame" x="142" y="20" width="72" height="37"/>
+                                        <rect key="frame" x="33" y="20" width="72" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="前一个">
@@ -224,26 +292,73 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dkm-Nz-hj4">
+                                        <rect key="frame" x="124" y="14" width="85" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="显示结果">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="ebI-d9-Hpi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zE8-a9-xDG">
+                                <rect key="frame" x="258" y="423" width="62" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="回主菜单">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="IsW-oL-FW7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="choice1" destination="HNq-qz-uMp" id="Ngu-LN-RNX"/>
-                        <outlet property="choice2" destination="ido-c5-u61" id="cBK-x3-5Cq"/>
-                        <outlet property="choice3" destination="pgp-gn-2Cn" id="cKd-FK-7El"/>
+                        <outlet property="choice1Btn" destination="HNq-qz-uMp" id="Zxm-zA-pUQ"/>
+                        <outlet property="choice2Btn" destination="ido-c5-u61" id="gJ6-ch-fes"/>
+                        <outlet property="choice3Btn" destination="pgp-gn-2Cn" id="hG7-j0-JKG"/>
+                        <outlet property="commentLabel" destination="MZL-zu-wYx" id="gId-gX-45X"/>
+                        <outlet property="doneBtn" destination="dkm-Nz-hj4" id="rSm-1b-1dT"/>
                         <outlet property="listeningView" destination="Lvp-of-sgO" id="vsb-kS-zwo"/>
                         <outlet property="manualTextView" destination="rgL-uy-zgS" id="4vy-2z-MIh"/>
                         <outlet property="manualView" destination="yYN-LH-2Ly" id="Eie-4A-zre"/>
-                        <outlet property="progress" destination="8Zq-BO-L4t" id="c6L-1g-xfd"/>
-                        <outlet property="question" destination="MHm-fH-Q9L" id="UNE-GG-0Gp"/>
-                        <outlet property="word" destination="b9N-Mr-bwb" id="Ekw-aZ-dEb"/>
+                        <outlet property="progressLabel" destination="8Zq-BO-L4t" id="Zsa-3M-sD5"/>
+                        <outlet property="questionLabel" destination="MHm-fH-Q9L" id="Ai4-z0-HdT"/>
+                        <outlet property="resultView" destination="lrP-TV-BIG" id="4Pj-gZ-PsB"/>
+                        <outlet property="wordLabel" destination="b9N-Mr-bwb" id="2e6-YZ-bEI"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1236" y="155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jUJ-qe-hhk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLI-Fa-8ct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="CPU-Wu-sMo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IIY-YD-G4I">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="799" y="714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hrt-7X-404">
@@ -253,47 +368,6 @@
                     <view key="view" contentMode="scaleToFill" id="SoC-Fs-gjT">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" id="yYN-LH-2Ly" customClass="TianjinhuaManualView">
-                                <rect key="frame" x="-82" y="-86" width="320" height="460"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="rgL-uy-zgS">
-                                        <rect key="frame" x="51" y="20" width="219" height="293"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Hello World!  这个是一个测试，只是一个测试，真的只是一个测试，真的真的只是一个测试。。。。Target is expanding its partnership with Shopkick, a mobile couponing app that allows shoppers to collect and exchange points for rewards.
-Beginning Wednesday, shoppers equipped with Shopkick on their iPhone or Android devices will be eligible to collect points, or “kicks,” as soon as they step foot in one of Target’s 1,764 stores. They can earn more points by scanning various products in the store using the app, and then redeem those points for items such as Target gift cards, Facebook credits, dining gift certificates, iTunes downloads, charitable donations, etc.
-
-So how much do you have to do for a reward? Five hundred kicks will get you a $2 Target gift card; 6,250 will get you a $25 one. Walking into a store merits 60 kicks on a normal day, and between 120 and 300 kicks on special promotional days. Scan every designated item in the store and you’ll earn 315 kicks. If that seems like a lot of work, remember, it’s designed as a bonus for repeat shoppers — not scavenger hunters.
-
-Target’s program is an expansion of one implemented at 242 of its stores in November 2010 and is the largest partnership Shopkick has announced to date. In November, the startup partnered with Visa to allow shoppers to collect points by making purchases from — rather than just visiting — retailers including Toys “R” Us, American Eagle Outfitters, Old Navy and Wet Seal. Shopkick, which claims 3 million members, has also worked with CW Television Network, offering kicks in exchange for watching and recording ads displayed on the network.
-
-Shopkick has more than 3 million registered users and has recorded 7 million verified walk-ins to partner stores since launching in June 2009, the company tells us.
-
-More About: retail, shopkick, Target</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eoW-kg-57p">
-                                        <rect key="frame" x="107" y="346" width="107" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="OK">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="okTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="Tmn-x3-nIu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -319,37 +393,6 @@ More About: retail, shopkick, Target</mutableString>
             <point key="canvasLocation" x="273" y="145"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="TianjinhuaListeningController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaListeningController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="choice1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="choice2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="choice3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listeningView" candidateClass="TianjinhuaListeningView"/>
-                <relationship kind="outlet" name="manualTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="manualView" candidateClass="TianjinhuaManualView"/>
-                <relationship kind="outlet" name="progress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="question" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="word" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TianjinhuaListeningView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaListeningView.h"/>
-        </class>
-        <class className="TianjinhuaManualView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaManualView.h"/>
-        </class>
-        <class className="TianjinhuaMenu" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaMenu.h"/>
-        </class>
-        <class className="TianjinhuaViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="menuView" candidateClass="TianjinhuaMenu"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
