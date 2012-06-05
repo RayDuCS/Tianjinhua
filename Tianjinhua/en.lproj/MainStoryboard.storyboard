@@ -99,7 +99,7 @@
                     <connections>
                         <outlet property="menuView" destination="Hq2-CD-xtM" id="CtO-Sj-Eze"/>
                         <outlet property="view" destination="Hq2-CD-xtM" id="0ht-kT-1nM"/>
-                        <outlet property="welcomeView" destination="x6j-iT-zbz" id="VmN-LS-zQM"/>
+                        <outlet property="welcomeView" destination="x6j-iT-zbz" id="uPw-Mc-8rS"/>
                     </connections>
                 </viewController>
             </objects>
