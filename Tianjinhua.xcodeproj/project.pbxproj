@@ -17,6 +17,7 @@
 		136639B3157D6416006051D9 /* audiofile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 136639B1157D6416006051D9 /* audiofile.mp3 */; };
 		136639B4157D6416006051D9 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 136639B2157D6416006051D9 /* pew-pew-lei.caf */; };
 		136639B8157D6BD7006051D9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136639B7157D6BD7006051D9 /* AVFoundation.framework */; };
+		136639BB157D9F02006051D9 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 136639BA157D9F02006051D9 /* welcome.jpg */; };
 		13779BB5156C35000035475C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB4156C35000035475C /* UIKit.framework */; };
 		13779BB7156C35000035475C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB6156C35000035475C /* Foundation.framework */; };
 		13779BB9156C35000035475C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB8156C35000035475C /* CoreGraphics.framework */; };
@@ -45,6 +46,7 @@
 		136639B1157D6416006051D9 /* audiofile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = audiofile.mp3; path = Sounds/audiofile.mp3; sourceTree = "<group>"; };
 		136639B2157D6416006051D9 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "Sounds/pew-pew-lei.caf"; sourceTree = "<group>"; };
 		136639B7157D6BD7006051D9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		136639BA157D9F02006051D9 /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = welcome.jpg; path = Images/welcome.jpg; sourceTree = "<group>"; };
 		13779BB0156C35000035475C /* Tianjinhua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tianjinhua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13779BB4156C35000035475C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13779BB6156C35000035475C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +110,14 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		136639B9157D9E27006051D9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				136639BA157D9F02006051D9 /* welcome.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		13779BA5156C35000035475C = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		13779BBA156C35000035475C /* Tianjinhua */ = {
 			isa = PBXGroup;
 			children = (
+				136639B9157D9E27006051D9 /* Images */,
 				136639B6157D6432006051D9 /* Sounds */,
 				13779BC3156C35000035475C /* TianjinhuaAppDelegate.h */,
 				13779BC4156C35000035475C /* TianjinhuaAppDelegate.m */,
@@ -223,6 +234,7 @@
 				13779BC8156C35000035475C /* MainStoryboard.storyboard in Resources */,
 				136639B3157D6416006051D9 /* audiofile.mp3 in Resources */,
 				136639B4157D6416006051D9 /* pew-pew-lei.caf in Resources */,
+				136639BB157D9F02006051D9 /* welcome.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
