@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface TianjinhuaListeningController : UIViewController
+@interface TianjinhuaListeningController : UIViewController<AVAudioPlayerDelegate>{
+    AVAudioPlayer *audioPlayer;
+    
+}
+
 @end

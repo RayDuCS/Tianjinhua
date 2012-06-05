@@ -32,6 +32,8 @@
 
 @property (strong, nonatomic) NSArray *words;
 @property (strong, nonatomic) NSArray *choices;
+@property (weak, nonatomic) IBOutlet UIButton *soundPlayer;
+@property (nonatomic) NSString * currentSoundPath;
 @property (nonatomic) int currentWordIdx;
 
 @end
@@ -52,6 +54,8 @@
 @synthesize doneBtn = _doneBtn;
 @synthesize currentWordIdx = _currentWordIdx;
 @synthesize choices = _choices;
+@synthesize currentSoundPath = _currentSoundPath;
+@synthesize soundPlayer = _soundPlayer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,8 +72,8 @@
     self.listeningView.hidden = YES;
     self.manualView.hidden = YES;
     self.resultView.hidden = YES;
-    [self changeManualViewToHidden:NO];
-    //[self changeListeningViewToHidden:NO];
+    //[self changeManualViewToHidden:NO];
+    [self changeListeningViewToHidden:NO];
 }
 
 - (void)viewDidUnload
@@ -125,6 +129,7 @@
     TianjinhuaWord *word = [self.words objectAtIndex:_currentWordIdx];
     self.wordLabel.text = word.word;
     self.questionLabel.text = word.question;
+    self.currentSoundPath = word.soundPath;
     [self setBtn:self.choice1Btn withTitle:[word.explanation objectAtIndex:0]];
     [self setBtn:self.choice2Btn withTitle:[word.explanation objectAtIndex:1]];
     [self setBtn:self.choice3Btn withTitle:[word.explanation objectAtIndex:2]];
@@ -245,5 +250,37 @@
         [self changeListeningViewToHidden:NO];
     }
 }
+- (IBAction)soundPlayerPressed:(UIButton *)sender 
+{
+    NSError *error;
+    audioPlayer = nil;
+    audioPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:self.currentSoundPath] error:&error];
+    
+	//audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	audioPlayer.numberOfLoops = 0;
+    //audioPlayer.
+	
+    if (audioPlayer == nil)
+		NSLog(@"here");				
+	else 
+		[audioPlayer play];
+}
+
+-(void)playAudio
+{
+    [audioPlayer play];
+}
+-(void)stopAudio
+{
+    [audioPlayer stop];
+}
+-(void)adjustVolume
+{
+    if (audioPlayer != nil)
+    {
+        //audioPlayer.volume = volumeControl.value;
+    }
+} 
+
 
 @end

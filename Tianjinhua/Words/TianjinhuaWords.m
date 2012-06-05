@@ -15,100 +15,127 @@
 - (void) load
 {
     TianjinhuaWord *baozi = 
-    [TianjinhuaWord initWithWord:@"包子"
+    [TianjinhuaWord initWithWord:@"拔闯"
                       withPinyin:@"baozi" 
-                    withQuestion:@"包子是嘛?" 
-                      withAnswer:@"吃的"
-                 withExplanation:[NSArray arrayWithObjects:@"吃的",@"喝的",@"坐的", nil]];
+                    withQuestion:@"拔闯是去干嘛？"
+                      withAnswer:@"打抱不平"
+                 withExplanation:[NSArray arrayWithObjects:@"很用力的开门",@"无所谓的样子",@"打抱不平", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
     TianjinhuaWord *jiaozi = 
-    [TianjinhuaWord initWithWord:@"饺子"
+    [TianjinhuaWord initWithWord:@"打镲"
                       withPinyin:@"jiaozi" 
-                    withQuestion:@"饺子是嘛?" 
-                      withAnswer:@"食物"
-                 withExplanation:[NSArray arrayWithObjects:@"食物",@"衣服",@"家具", nil]];
+                    withQuestion:@"打镲是干嘛?" 
+                      withAnswer:@"打岔"
+                 withExplanation:[NSArray arrayWithObjects:@"打磨光亮",@"敲锣打鼓的吵闹别人",@"打岔", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
     TianjinhuaWord *jianbing = 
-    [TianjinhuaWord initWithWord:@"煎饼"
+    [TianjinhuaWord initWithWord:@"捯饬"
                       withPinyin:@"jianbing" 
-                    withQuestion:@"煎饼果子能自燃么?" 
-                      withAnswer:@"不能"
-                 withExplanation:[NSArray arrayWithObjects:@"能",@"不能",@"燃烧吧，小煎饼", nil]];
+                    withQuestion:@"捯饬" 
+                      withAnswer:@"打扮"
+                 withExplanation:[NSArray arrayWithObjects:@"打扮",@"收拾打扫",@"抽拉东西的样子", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     TianjinhuaWord *daboluo = 
-    [TianjinhuaWord initWithWord:@"大菠萝"
+    [TianjinhuaWord initWithWord:@"得楞"
                       withPinyin:@"daboluo" 
-                    withQuestion:@"大菠萝碰到剑圣会发生什么?" 
-                      withAnswer:@"水果忍者"
-                 withExplanation:[NSArray arrayWithObjects:@"英雄从恶魔手上拯救世界",@"水果忍者",@"暴雪抽风了", nil]];
+                    withQuestion:@"得楞是？" 
+                      withAnswer:@"修理"
+                 withExplanation:[NSArray arrayWithObjects:@"修理",@"\"二\"了吧唧的样子",@"又呆又傻", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     TianjinhuaWord *rapier = 
-    [TianjinhuaWord initWithWord:@"刺刀"
+    [TianjinhuaWord initWithWord:@"翻呲"
                       withPinyin:@"cidao" 
-                    withQuestion:@"刺刀和游荡者的关系是?" 
-                      withAnswer:@"武器和施暴者"
-                 withExplanation:[NSArray arrayWithObjects:@"他们都是小说里才能出现的",@"武器和施暴者",@"楼主傻逼", nil]];
+                    withQuestion:@"翻呲是？" 
+                      withAnswer:@"翻脸"
+                 withExplanation:[NSArray arrayWithObjects:@"翻白眼",@"翻东西的状态",@"翻脸", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     
     
     
     TianjinhuaWord *bingjiling= 
-    [TianjinhuaWord initWithWord:@"冰激凌"
+    [TianjinhuaWord initWithWord:@"二五眼"
                       withPinyin:@"bingjiling" 
-                    withQuestion:@"这是个什么?" 
-                      withAnswer:@"雪糕"
-                 withExplanation:[NSArray arrayWithObjects:@"貌似是衣服",@"雪糕",@"只能夏天食用的甜点", nil]];
+                    withQuestion:@"二五眼" 
+                      withAnswer:@"凑合"
+                 withExplanation:[NSArray arrayWithObjects:@"鄙视的眼神",@"势利眼，看人下菜碟 ",@"凑合", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     TianjinhuaWord *apple = 
-    [TianjinhuaWord initWithWord:@"苹果"
+    [TianjinhuaWord initWithWord:@"贫"
                       withPinyin:@"pingguo" 
-                    withQuestion:@"这个物品哪里最多?" 
-                      withAnswer:@"水果园"
-                 withExplanation:[NSArray arrayWithObjects:@"水果园",@"伊甸园",@"超市", nil]];
+                    withQuestion:@"贫" 
+                      withAnswer:@"说起话来没完没了"
+                 withExplanation:[NSArray arrayWithObjects:@"花言巧语",@"馋嘴",@"说起话来没完没了", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     TianjinhuaWord *paper = 
-    [TianjinhuaWord initWithWord:@"卫生纸"
+    [TianjinhuaWord initWithWord:@"崴泥"
                       withPinyin:@"weishengzhi" 
                     withQuestion:@"这个是用来做什么的?" 
-                      withAnswer:@"擦擦用"
-                 withExplanation:[NSArray arrayWithObjects:@"生火必需品",@"擦擦用",@"宅男必需品", nil]];
+                      withAnswer:@"糟糕坏事了"
+                 withExplanation:[NSArray arrayWithObjects:@"掉泥坑里去了",@"烂泥扶不上墙",@"糟糕坏事了", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     TianjinhuaWord *choc = 
-    [TianjinhuaWord initWithWord:@"巧克力"
+    [TianjinhuaWord initWithWord:@"五脊六兽"
                       withPinyin:@"qiaokeli" 
                     withQuestion:@"有彩色的巧克力么?" 
-                      withAnswer:@"楼主傻逼"
-                 withExplanation:[NSArray arrayWithObjects:@"没有！",@"我不知道啊啊啊啊啊",@"楼主傻逼", nil]];
+                      withAnswer:@"闲的难受"
+                 withExplanation:[NSArray arrayWithObjects:@"用很多花招和计谋办成事情！",@"闲的难受",@"五脏六腑", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     TianjinhuaWord *juice = 
-    [TianjinhuaWord initWithWord:@"果汁"
+    [TianjinhuaWord initWithWord:@"幺蛾子"
                       withPinyin:@"guozhi" 
                     withQuestion:@"果汁很甜么?" 
-                      withAnswer:@"不一定"
-                 withExplanation:[NSArray arrayWithObjects:@"谁知道呢",@"不一定",@"超级甜哦，亲", nil]];
+                      withAnswer:@"招惹的麻烦"
+                 withExplanation:[NSArray arrayWithObjects:@"指某种有很多小心思、小心眼的人",@"招惹的麻烦",@"多彩斑斓的物品", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     
     TianjinhuaWord *chops = 
-    [TianjinhuaWord initWithWord:@"筷子"
+    [TianjinhuaWord initWithWord:@"招欠"
                       withPinyin:@"kuaizi" 
-                    withQuestion:@"筷子的同义词?" 
-                      withAnswer:@"竹棍"
-                 withExplanation:[NSArray arrayWithObjects:@"筷子",@"啊？",@"竹棍", nil]];
+                    withQuestion:@"招欠的同义词?" 
+                      withAnswer:@"讨人厌的行为"
+                 withExplanation:[NSArray arrayWithObjects:@"做事欠考虑",@"被揍",@"讨人厌的行为", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
     TianjinhuaWord *stamp = 
-    [TianjinhuaWord initWithWord:@"邮票"
+    [TianjinhuaWord initWithWord:@"挣崴"
                       withPinyin:@"youpiao" 
                     withQuestion:@"这个干嘛使得?" 
-                      withAnswer:@"寄信用"
-                 withExplanation:[NSArray arrayWithObjects:@"喷口水的",@"寄信用",@"烧钱的", nil]];
-    TianjinhuaWord *mtg = 
-    [TianjinhuaWord initWithWord:@"万智牌"
-                      withPinyin:@"wanzhipai" 
-                    withQuestion:@"万智牌是?" 
-                      withAnswer:@"大坑"
-                 withExplanation:[NSArray arrayWithObjects:@"牌",@"某著名卡牌游戏",@"大坑", nil]];
-    TianjinhuaWord *towel = 
-    [TianjinhuaWord initWithWord:@"毛巾"
-                      withPinyin:@"maojin" 
-                    withQuestion:@"毛巾啊?" 
-                      withAnswer:@"楼主傻逼"
-                 withExplanation:[NSArray arrayWithObjects:@"啥？",@"不懂",@"楼主傻逼", nil]];
-    TianjinhuaWord *dead = 
-    [TianjinhuaWord initWithWord:@"挂了"
-                      withPinyin:@"guale" 
-                    withQuestion:@"挂了什么意思?" 
-                      withAnswer:@"扑街了"
-                 withExplanation:[NSArray arrayWithObjects:@"游戏术语",@"挂衣服",@"扑街了", nil]];
+                      withAnswer:@"随便乱动的样子"
+                 withExplanation:[NSArray arrayWithObjects:@"走路一瘸一拐",@"努力奋斗的样子",@"随便乱动的样子", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
     
+    TianjinhuaWord *mtg = 
+    [TianjinhuaWord initWithWord:@"眼力见儿"
+                      withPinyin:@"wanzhipai" 
+                    withQuestion:@"眼力见儿是?" 
+                      withAnswer:@"察言观色的能力"
+                 withExplanation:[NSArray arrayWithObjects:@"对事物的欣赏能力",@"做事情有远见，能透过表面看本质",@"察言观色的能力", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
+    TianjinhuaWord *towel = 
+    [TianjinhuaWord initWithWord:@"老鼻子"
+                      withPinyin:@"maojin" 
+                    withQuestion:@"老鼻子" 
+                      withAnswer:@"特别多的样子"
+                 withExplanation:[NSArray arrayWithObjects:@"蹬鼻子上脸",@"特别多的样子",@"经验丰富的样子", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+    
+    TianjinhuaWord *dead = 
+    [TianjinhuaWord initWithWord:@"来事儿"
+                      withPinyin:@"guale" 
+                    withQuestion:@"来事儿" 
+                      withAnswer:@"讨人欢心"
+                 withExplanation:[NSArray arrayWithObjects:@"霸道的样子",@"吃饱了撑得",@"讨人欢心", nil]
+                       withSound:[[NSBundle mainBundle] pathForResource : @"pew-pew-lei" ofType :@"caf"]];
+
     self.words = [NSArray arrayWithObjects:baozi,jiaozi,jianbing,daboluo,rapier, apple, paper, choc, juice, chops, stamp, mtg, towel, dead, bingjiling, nil];
 }
 

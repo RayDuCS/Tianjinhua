@@ -14,6 +14,9 @@
 		13663996157033A8006051D9 /* TianjinhuaWords.m in Sources */ = {isa = PBXBuildFile; fileRef = 13663994157033A8006051D9 /* TianjinhuaWords.m */; };
 		13663999157033E1006051D9 /* TianjinhuaListeningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13663998157033E1006051D9 /* TianjinhuaListeningView.m */; };
 		1366399C15703A80006051D9 /* TianjinhuaListeningResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1366399B15703A80006051D9 /* TianjinhuaListeningResult.m */; };
+		136639B3157D6416006051D9 /* audiofile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 136639B1157D6416006051D9 /* audiofile.mp3 */; };
+		136639B4157D6416006051D9 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 136639B2157D6416006051D9 /* pew-pew-lei.caf */; };
+		136639B8157D6BD7006051D9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136639B7157D6BD7006051D9 /* AVFoundation.framework */; };
 		13779BB5156C35000035475C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB4156C35000035475C /* UIKit.framework */; };
 		13779BB7156C35000035475C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB6156C35000035475C /* Foundation.framework */; };
 		13779BB9156C35000035475C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13779BB8156C35000035475C /* CoreGraphics.framework */; };
@@ -39,6 +42,9 @@
 		13663998157033E1006051D9 /* TianjinhuaListeningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TianjinhuaListeningView.m; path = Listening/TianjinhuaListeningView.m; sourceTree = "<group>"; };
 		1366399A15703A80006051D9 /* TianjinhuaListeningResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TianjinhuaListeningResult.h; path = Listening/TianjinhuaListeningResult.h; sourceTree = "<group>"; };
 		1366399B15703A80006051D9 /* TianjinhuaListeningResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TianjinhuaListeningResult.m; path = Listening/TianjinhuaListeningResult.m; sourceTree = "<group>"; };
+		136639B1157D6416006051D9 /* audiofile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = audiofile.mp3; path = Sounds/audiofile.mp3; sourceTree = "<group>"; };
+		136639B2157D6416006051D9 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "Sounds/pew-pew-lei.caf"; sourceTree = "<group>"; };
+		136639B7157D6BD7006051D9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		13779BB0156C35000035475C /* Tianjinhua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tianjinhua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13779BB4156C35000035475C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13779BB6156C35000035475C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136639B8157D6BD7006051D9 /* AVFoundation.framework in Frameworks */,
 				13779BB5156C35000035475C /* UIKit.framework in Frameworks */,
 				13779BB7156C35000035475C /* Foundation.framework in Frameworks */,
 				13779BB9156C35000035475C /* CoreGraphics.framework in Frameworks */,
@@ -92,9 +99,19 @@
 			name = Words;
 			sourceTree = "<group>";
 		};
+		136639B6157D6432006051D9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				136639B1157D6416006051D9 /* audiofile.mp3 */,
+				136639B2157D6416006051D9 /* pew-pew-lei.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		13779BA5156C35000035475C = {
 			isa = PBXGroup;
 			children = (
+				136639B7157D6BD7006051D9 /* AVFoundation.framework */,
 				13779BBA156C35000035475C /* Tianjinhua */,
 				13779BBB156C35000035475C /* Supporting Files */,
 				13779BB3156C35000035475C /* Frameworks */,
@@ -123,6 +140,7 @@
 		13779BBA156C35000035475C /* Tianjinhua */ = {
 			isa = PBXGroup;
 			children = (
+				136639B6157D6432006051D9 /* Sounds */,
 				13779BC3156C35000035475C /* TianjinhuaAppDelegate.h */,
 				13779BC4156C35000035475C /* TianjinhuaAppDelegate.m */,
 				13779BC6156C35000035475C /* MainStoryboard.storyboard */,
@@ -203,6 +221,8 @@
 			files = (
 				13779BBF156C35000035475C /* InfoPlist.strings in Resources */,
 				13779BC8156C35000035475C /* MainStoryboard.storyboard in Resources */,
+				136639B3157D6416006051D9 /* audiofile.mp3 in Resources */,
+				136639B4157D6416006051D9 /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

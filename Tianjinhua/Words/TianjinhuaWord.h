@@ -14,12 +14,14 @@
 @property (nonatomic) NSString *question;
 @property (nonatomic) NSString *answer;
 @property (nonatomic) NSArray *explanation;
+@property (nonatomic) NSString *soundPath;
 
 + (TianjinhuaWord *) initWithWord: (NSString *)word
                        withPinyin: (NSString *)pinyin
                      withQuestion: (NSString *)question
                        withAnswer: (NSString *)answer
-                  withExplanation: (NSArray *)explanation;
+                  withExplanation: (NSArray *)explanation 
+                        withSound:(NSString *)sound;
 
 
 
