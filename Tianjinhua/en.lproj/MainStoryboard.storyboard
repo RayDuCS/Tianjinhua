@@ -262,6 +262,21 @@
                                     <action selector="menuTouched:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="IsW-oL-FW7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5OX-Mp-nW0">
+                                <rect key="frame" x="0.0" y="423" width="58" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="帮助">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="helpPressed:" destination="NJn-ha-Kzs" eventType="touchUpInside" id="p9c-x3-k29"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -271,6 +286,7 @@
                         <outlet property="choice3Btn" destination="pgp-gn-2Cn" id="hG7-j0-JKG"/>
                         <outlet property="commentLabel" destination="MZL-zu-wYx" id="gId-gX-45X"/>
                         <outlet property="doneBtn" destination="dkm-Nz-hj4" id="rSm-1b-1dT"/>
+                        <outlet property="helpBtn" destination="5OX-Mp-nW0" id="CFi-uf-fH2"/>
                         <outlet property="listeningView" destination="Lvp-of-sgO" id="vsb-kS-zwo"/>
                         <outlet property="manualTextView" destination="rgL-uy-zgS" id="4vy-2z-MIh"/>
                         <outlet property="manualView" destination="yYN-LH-2Ly" id="Eie-4A-zre"/>
@@ -435,45 +451,6 @@ More About: retail, shopkick, Target</string>
     <resources>
         <image name="welcome.jpg" width="100" height="150"/>
     </resources>
-    <classes>
-        <class className="TianjinhuaListeningController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaListeningController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="choice1Btn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="choice2Btn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="choice3Btn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="commentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="doneBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listeningView" candidateClass="TianjinhuaListeningView"/>
-                <relationship kind="outlet" name="manualTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="manualView" candidateClass="TianjinhuaManualView"/>
-                <relationship kind="outlet" name="progressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="resultView" candidateClass="TianjinhuaListeningResult"/>
-                <relationship kind="outlet" name="soundPlayer" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="wordLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TianjinhuaListeningResult" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaListeningResult.h"/>
-        </class>
-        <class className="TianjinhuaListeningView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaListeningView.h"/>
-        </class>
-        <class className="TianjinhuaManualView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaManualView.h"/>
-        </class>
-        <class className="TianjinhuaMenu" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaMenu.h"/>
-        </class>
-        <class className="TianjinhuaViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TianjinhuaViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="menuView" candidateClass="TianjinhuaMenu"/>
-                <relationship kind="outlet" name="welcomeView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

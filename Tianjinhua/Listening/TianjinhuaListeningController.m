@@ -12,6 +12,7 @@
 #import "TianjinhuaListeningResult.h"
 #import "TianjinhuaWords.h"
 #import "TianjinhuaWord.h"
+#import "RDMTPopupWindow.h"
 
 #define CAPACITY 5
 
@@ -29,12 +30,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *doneBtn;
+@property (weak, nonatomic) IBOutlet UIButton *helpBtn;
 
 @property (strong, nonatomic) NSArray *words;
 @property (strong, nonatomic) NSArray *choices;
 @property (weak, nonatomic) IBOutlet UIButton *soundPlayer;
 @property (nonatomic) NSString * currentSoundPath;
 @property (nonatomic) int currentWordIdx;
+
+@property (nonatomic, strong) RDMTPopupWindow *popup;
 
 @end
 
@@ -52,10 +56,12 @@
 @synthesize progressLabel = _progressLabel;
 @synthesize commentLabel = _commentLabel;
 @synthesize doneBtn = _doneBtn;
+@synthesize helpBtn = _helpBtn;
 @synthesize currentWordIdx = _currentWordIdx;
 @synthesize choices = _choices;
 @synthesize currentSoundPath = _currentSoundPath;
 @synthesize soundPlayer = _soundPlayer;
+@synthesize popup = _popup;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -90,6 +96,7 @@
     [self setDoneBtn:nil];
     [self setResultView:nil];
     [self setCommentLabel:nil];
+    [self setHelpBtn:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -141,6 +148,13 @@
 {
     [self dismissModalViewControllerAnimated:NO];
 }
+
+- (IBAction)helpPressed:(UIButton *)sender
+{
+    self.popup = [RDMTPopupWindow initWithHTMLFile:@"http://www.google.com" insideView:self.view];
+    [self.view addSubview:self.popup.bgView];
+}
+
 
 - (IBAction)okTouched:(UIButton *)sender
 {

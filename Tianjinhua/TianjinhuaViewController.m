@@ -14,7 +14,7 @@
 @interface TianjinhuaViewController ()
 
 @property (nonatomic, weak) IBOutlet TianjinhuaMenu *menuView;
-@property (weak, nonatomic) IBOutlet UIImageView *welcomeView;
+@property (nonatomic, weak) IBOutlet UIImageView *welcomeView;
 
 @end
 
