@@ -10,7 +10,7 @@
 #import "RDMTPopupWindow.h"
 
 #define kShadeViewTag 1000
-#define CLOSE_BTN_OFFSET 10
+#define TOP_OFFSET 10
 
 @interface RDMTPopupWindow()
 @end
@@ -19,6 +19,7 @@
 
 @synthesize bgView = _bgView;
 @synthesize bigPanelView = _bigPanelView;
+@synthesize frame = _frame;
 
 
 /**
@@ -26,17 +27,18 @@
  * @param UIView* contentView is a generic view that displayed inside the popup
  * @param UIView* sview provide a UIViewController's view here (or other view)
  */
--(RDMTPopupWindow *)initWithContentView:(UIView *)contentView
-                             insideView:(UIView *)sview
+-(RDMTPopupWindow *)initInSuperView:(UIView *)sview
+                    withContentView:(UIView *)cview
+                          withFrame:(CGRect)frame
 {
     self = [super init];
     if (self) {
         // Initialization code here.
         self.bgView = [[UIView alloc] initWithFrame: sview.bounds];
-        //[sview addSubview: self.bgView];
+        self.frame = frame;
         
         // proceed with animation after the bgView was added
-        [self performSelector:@selector(doTransitionWithContentFile:) withObject:contentView afterDelay:0.1];
+        [self doTransitionWithContentView:cview];
     }
     
     return self;
@@ -46,10 +48,10 @@
  * Afrer the window background is added to the UI the window can animate in
  * and load the UIWebView
  */
--(void)doTransitionWithContentFile:(UIView *)contentView
+-(void)doTransitionWithContentView:(UIView *)cview
 {
     //faux view
-    UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(CLOSE_BTN_OFFSET, CLOSE_BTN_OFFSET, 200, 200)];
+    UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(TOP_OFFSET, TOP_OFFSET, 200, 200)];
     [self.bgView addSubview: fauxView];
 
     //the new panel
@@ -59,16 +61,18 @@
     //add the window background
     UIImageView* background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"popupWindowBack.png"]];
     background.center = CGPointMake(self.bigPanelView.frame.size.width/2, self.bigPanelView.frame.size.height/2);
+    background.frame = self.frame;
+    //background.contentMode = UIViewContentModeScaleAspectFit;
     [self.bigPanelView addSubview: background];
     
-    //add the content
-    contentView.frame = CGRectInset(background.frame, CLOSE_BTN_OFFSET, CLOSE_BTN_OFFSET);
-    contentView.backgroundColor = [UIColor clearColor];
+    //add the content view
+    cview.frame = CGRectInset(background.frame, TOP_OFFSET, TOP_OFFSET);
+    cview.backgroundColor = [UIColor clearColor];
+    [self.bigPanelView addSubview:cview];
     
-    [self.bigPanelView addSubview: contentView];
     
     //add the close button
-    int closeBtnOffset = CLOSE_BTN_OFFSET;
+    int closeBtnOffset = TOP_OFFSET;
     UIImage* closeBtnImg = [UIImage imageNamed:@"popupCloseBtn.png"];
     UIButton* closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeBtn setImage:closeBtnImg forState:UIControlStateNormal];
@@ -80,9 +84,7 @@
     [self.bigPanelView addSubview: closeBtn];
     
     //animation options
-    UIViewAnimationOptions options = UIViewAnimationOptionTransitionCrossDissolve  |
-                                        UIViewAnimationOptionAllowUserInteraction    |
-                                        UIViewAnimationOptionBeginFromCurrentState;
+    UIViewAnimationOptions options = UIViewAnimationOptionTransitionCrossDissolve  |            UIViewAnimationOptionAllowUserInteraction    | UIViewAnimationOptionBeginFromCurrentState;
     
     //run the animation
     [UIView transitionFromView:fauxView toView:self.bigPanelView duration:0.5 options:options completion: ^(BOOL finished) {
@@ -117,13 +119,11 @@
 {
     
     //faux view
-    __block UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(CLOSE_BTN_OFFSET, CLOSE_BTN_OFFSET, 200, 200)];
+    __block UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(TOP_OFFSET, TOP_OFFSET, 200, 200)];
     [self.bgView addSubview: fauxView];
 
     //run the animation
-    UIViewAnimationOptions options = UIViewAnimationOptionTransitionCrossDissolve |
-    UIViewAnimationOptionAllowUserInteraction    |
-    UIViewAnimationOptionBeginFromCurrentState;
+    UIViewAnimationOptions options = UIViewAnimationOptionTransitionCrossDissolve | UIViewAnimationOptionAllowUserInteraction    | UIViewAnimationOptionBeginFromCurrentState;
     
     //hold to the bigPanelView, because it'll be removed during the animation
     //[self.bigPanelView retain];

@@ -171,6 +171,8 @@
 				13663A5B15813E98006051D9 /* lib */,
 				136639B9157D9E27006051D9 /* Images */,
 				136639B6157D6432006051D9 /* Sounds */,
+				1366398D15702A23006051D9 /* Words */,
+				1366398C157029D3006051D9 /* Listening */,
 				13779BC3156C35000035475C /* TianjinhuaAppDelegate.h */,
 				13779BC4156C35000035475C /* TianjinhuaAppDelegate.m */,
 				13779BC6156C35000035475C /* MainStoryboard.storyboard */,
@@ -180,8 +182,6 @@
 				1366396E156EBE0E006051D9 /* TianjinhuaMenu.m */,
 				13779BC9156C35000035475C /* TianjinhuaViewController.h */,
 				13779BCA156C35000035475C /* TianjinhuaViewController.m */,
-				1366398D15702A23006051D9 /* Words */,
-				1366398C157029D3006051D9 /* Listening */,
 			);
 			path = Tianjinhua;
 			sourceTree = "<group>";

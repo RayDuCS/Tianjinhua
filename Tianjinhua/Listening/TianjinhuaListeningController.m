@@ -150,12 +150,13 @@
 }
 
 - (IBAction)helpPressed:(UIButton *)sender
-{
+{   
     UIWebView *web = [[UIWebView alloc] init];
     web.scalesPageToFit = YES;
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: @"http://www.google.com"]]];
-    
-    self.popup = [[RDMTPopupWindow alloc] initWithContentView:web insideView:self.view];
+    self.popup = [[RDMTPopupWindow alloc] initInSuperView:self.view
+                                          withContentView:web
+                                                withFrame:CGRectMake(30, 30, 260, 420)];
     
     [self.view addSubview:self.popup.bgView];
 }

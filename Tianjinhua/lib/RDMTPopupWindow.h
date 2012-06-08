@@ -13,8 +13,10 @@
 
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UIView *bigPanelView;
+@property (nonatomic) CGRect frame;
 
--(RDMTPopupWindow *)initWithContentView:(UIView *)contentView
-                             insideView:(UIView*)sview;
+-(RDMTPopupWindow *)initInSuperView:(UIView *)sview
+                    withContentView:(UIView *)cview
+                          withFrame:(CGRect) frame;
 
 @end
