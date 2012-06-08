@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UIView *bigPanelView;
 
-+(RDMTPopupWindow *)initWithHTMLFile:(NSString*)fileName insideView:(UIView*)view;
+-(RDMTPopupWindow *)initWithContentView:(UIView *)contentView
+                             insideView:(UIView*)sview;
 
 @end

@@ -151,7 +151,12 @@
 
 - (IBAction)helpPressed:(UIButton *)sender
 {
-    self.popup = [RDMTPopupWindow initWithHTMLFile:@"http://www.google.com" insideView:self.view];
+    UIWebView *web = [[UIWebView alloc] init];
+    web.scalesPageToFit = YES;
+    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: @"http://www.google.com"]]];
+    
+    self.popup = [[RDMTPopupWindow alloc] initWithContentView:web insideView:self.view];
+    
     [self.view addSubview:self.popup.bgView];
 }
 

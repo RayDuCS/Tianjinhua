@@ -10,6 +10,7 @@
 #import "RDMTPopupWindow.h"
 
 #define kShadeViewTag 1000
+#define CLOSE_BTN_OFFSET 10
 
 @interface RDMTPopupWindow()
 @end
@@ -22,19 +23,11 @@
 
 /**
  * This is the only public method, it opens a popup window and loads the given content
- * @param NSString* fileName provide a file name to load a file from the app resources, or a URL to load a web page
- * @param UIView* view provide a UIViewController's view here (or other view)
+ * @param UIView* contentView is a generic view that displayed inside the popup
+ * @param UIView* sview provide a UIViewController's view here (or other view)
  */
-+(RDMTPopupWindow *)initWithHTMLFile:(NSString*)fileName insideView:(UIView*)view;
-{
-    return [[RDMTPopupWindow alloc] initWithSuperview:view andFile:fileName];
-}
-
-/**
- * Initializes the class instance, gets a view where the window will pop up in
- * and a file name/ URL
- */
-- (id)initWithSuperview:(UIView*)sview andFile:(NSString*)fName
+-(RDMTPopupWindow *)initWithContentView:(UIView *)contentView
+                             insideView:(UIView *)sview
 {
     self = [super init];
     if (self) {
@@ -43,7 +36,7 @@
         //[sview addSubview: self.bgView];
         
         // proceed with animation after the bgView was added
-        [self performSelector:@selector(doTransitionWithContentFile:) withObject:fName afterDelay:0.1];
+        [self performSelector:@selector(doTransitionWithContentFile:) withObject:contentView afterDelay:0.1];
     }
     
     return self;
@@ -53,10 +46,10 @@
  * Afrer the window background is added to the UI the window can animate in
  * and load the UIWebView
  */
--(void)doTransitionWithContentFile:(NSString*)fName
+-(void)doTransitionWithContentFile:(UIView *)contentView
 {
     //faux view
-    UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(10, 10, 200, 200)];
+    UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(CLOSE_BTN_OFFSET, CLOSE_BTN_OFFSET, 200, 200)];
     [self.bgView addSubview: fauxView];
 
     //the new panel
@@ -68,30 +61,14 @@
     background.center = CGPointMake(self.bigPanelView.frame.size.width/2, self.bigPanelView.frame.size.height/2);
     [self.bigPanelView addSubview: background];
     
-    //add the web view
-    int webOffset = 10;
-    UIWebView* web = [[UIWebView alloc] initWithFrame:CGRectInset(background.frame, webOffset, webOffset)];
-    web.backgroundColor = [UIColor clearColor];
+    //add the content
+    contentView.frame = CGRectInset(background.frame, CLOSE_BTN_OFFSET, CLOSE_BTN_OFFSET);
+    contentView.backgroundColor = [UIColor clearColor];
     
-    if ([fName hasPrefix:@"http"]) {
-        //load a web page
-        web.scalesPageToFit = YES;
-        [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: fName]]];
-    } else {
-        //load a local file
-        NSError* error = nil;
-        NSString* fileContents = [NSString stringWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:fName] encoding:NSUTF8StringEncoding error: &error];
-        if (error!=NULL) {
-            NSLog(@"error loading %@: %@", fName, [error localizedDescription]);
-        } else {
-            [web loadHTMLString: fileContents baseURL:[NSURL URLWithString:@"file://"]];
-        }
-    }
-    
-    [self.bigPanelView addSubview: web];
+    [self.bigPanelView addSubview: contentView];
     
     //add the close button
-    int closeBtnOffset = 10;
+    int closeBtnOffset = CLOSE_BTN_OFFSET;
     UIImage* closeBtnImg = [UIImage imageNamed:@"popupCloseBtn.png"];
     UIButton* closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeBtn setImage:closeBtnImg forState:UIControlStateNormal];
@@ -103,7 +80,7 @@
     [self.bigPanelView addSubview: closeBtn];
     
     //animation options
-    UIViewAnimationOptions options = UIViewAnimationOptionTransitionCrossDissolve |
+    UIViewAnimationOptions options = UIViewAnimationOptionTransitionCrossDissolve  |
                                         UIViewAnimationOptionAllowUserInteraction    |
                                         UIViewAnimationOptionBeginFromCurrentState;
     
@@ -140,7 +117,7 @@
 {
     
     //faux view
-    __block UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(10, 10, 200, 200)];
+    __block UIView* fauxView = [[UIView alloc] initWithFrame: CGRectMake(CLOSE_BTN_OFFSET, CLOSE_BTN_OFFSET, 200, 200)];
     [self.bgView addSubview: fauxView];
 
     //run the animation
@@ -162,7 +139,6 @@
         }
         //[self.bigPanelView release];
         [self.bgView removeFromSuperview];
-        
         //[self release];
     }];
 }
